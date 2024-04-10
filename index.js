@@ -23,7 +23,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin:"http://localhost:3000",
+		origin:['http://localhost:3000','https://ed-tech-vert.vercel.app'],
+		methods: ['POST', 'GET', 'PUT', 'DELETE', 'PATCH'],
 		credentials:true,
 	})
 )
